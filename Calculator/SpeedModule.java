@@ -1,6 +1,6 @@
 package Calculator;
 import javax.swing.*;
-import java.awt.*;
+import java.awwt.*;
 import java.awt.event.*;
 
 public class SpeedModule implements ActionListener {

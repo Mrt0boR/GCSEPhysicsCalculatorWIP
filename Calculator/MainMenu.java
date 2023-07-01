@@ -75,4 +75,10 @@ public class MainMenu implements ActionListener {
     public static void main(String[] args){
         new MainMenu();
     }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'actionPerformed'");
+    }
 }

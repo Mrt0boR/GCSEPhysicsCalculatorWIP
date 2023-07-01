@@ -97,4 +97,10 @@ public class SpeedModule implements ActionListener {
     public static void main(String[] args){
         new SpeedModule();
     }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'actionPerformed'");
+    }
 }

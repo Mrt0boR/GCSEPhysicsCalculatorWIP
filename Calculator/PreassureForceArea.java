@@ -1,9 +1,17 @@
 package Calculator;
 
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+
 public class PreassureForceArea {
-    public PreassureModule() {
+    public PreassureForceArea() {
         GUISetup();
     }
+
+    
+    //      PREASSURE CALCULATION   //
 
     public String calculate(String forcestring, String areastring) {
         double forcestring = Double.parseDouble(forcestring);
@@ -14,6 +22,46 @@ public class PreassureForceArea {
 
 
 
+
+    //      GUI SETUP FORMATTING    //
+    public void GUISetup() {
+
+        JFrame frame = new JFrame("Preassure");
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        JPanel panel = new JPanel( new GridBagLayout());
+        GridBagConstraints gbc = new GridBagConstraints();
+
+        //force field - not that kind of forcefield
+
+
+
+
+        //area field
+        
+
+        //  CALCULATION BUTTON  //
+
+
+        
+        
+        //output field
+
+
+
+        //panel to frame, framesize and visibility
+        frame.getContentPane().add(panel);
+        frame.setSize(300,300);
+        frame.setVisible(true);
+
+
+
+
+    }
+
+
+public static void main(String[] args){
+    new PreassureForceArea();
+}
 
 
 

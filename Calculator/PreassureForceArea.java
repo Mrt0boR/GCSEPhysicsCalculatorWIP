@@ -6,6 +6,11 @@ import java.awt.event.*;
 
 
 public class PreassureForceArea {
+
+    JTextField distanceField = new JTextField(10);
+    JTextField timeField = new JTextField(10);
+    JTextField resultField = new JTextField(5);
+
     public PreassureForceArea() {
         GUISetup();
     }
@@ -31,12 +36,22 @@ public class PreassureForceArea {
         JPanel panel = new JPanel( new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
 
-        //force field - not that kind of forcefield
+        //force label
+        JLabel forcelabel = new JLabel("Force Value :");
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        panel.add(forcelabel, gbc);
+        
+
+        //area label
+        JLabel arealabel = new JLabel("Area :");
+        gbc.gridx = 0;
+        gbc.gridy = 1;
+        panel.add(arealabel, gbc);
 
 
 
-
-        //area field
+       
         
 
         //  CALCULATION BUTTON  //

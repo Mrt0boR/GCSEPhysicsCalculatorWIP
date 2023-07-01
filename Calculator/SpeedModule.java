@@ -34,6 +34,7 @@ public class SpeedModule implements ActionListener {
         gbc.gridy = 0;
         panel.add(distanceField, gbc);
 
+        //distance label
         JLabel distanceLabel = new JLabel("Distance: ");
         gbc.gridx = 0;
         gbc.gridy = 0;
@@ -43,12 +44,14 @@ public class SpeedModule implements ActionListener {
         gbc.gridy = 1;
         panel.add(timeField, gbc);
 
+        //time label
+
         JLabel timeLabel = new JLabel("Time: ");
         gbc.gridx = 0;
         gbc.gridy = 1;
         panel.add(timeLabel, gbc);
 
-        //add button to perform calculation
+        //Calc button
         JButton calculateButton = new JButton("Calculate");
         gbc.gridx = 1;
         gbc.gridy = 2;
@@ -70,7 +73,9 @@ public class SpeedModule implements ActionListener {
         gbc.gridx = 1;
         gbc.gridy = 3;
         panel.add(resultField, gbc);
+        
 
+        //result label
         JLabel resultLabel = new JLabel("Result: ");
         gbc.gridx = 0;
         gbc.gridy = 3;

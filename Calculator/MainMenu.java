@@ -5,13 +5,13 @@ import java.awt.event.*;
 
 public class MainMenu implements ActionListener {
 
+    public static JFrame frame = new JFrame("Calculator");
     // constructor - good practice to include rather than loading up the main method
     public MainMenu() {
-        GUISetup();
+        pageSwitch();
     }
 
-    public void GUISetup() {
-        JFrame frame = new JFrame("Calculator");
+    public static void pageSwitch() {
         JPanel panel = new JPanel(new GridBagLayout());
         Color backgroundcustomcolour = new Color(198,198,198);
         panel.setBackground(backgroundcustomcolour);
@@ -57,18 +57,20 @@ public class MainMenu implements ActionListener {
         gbc.gridx = 1;
         gbc.gridy = 1;
         panel.add(speedModuleButton, gbc);
+        
         speedModuleButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent speedModulePressed) {
                 //Close the JFrame when the exit on JMenu item is clicked
-                new SpeedModule();
+                frame.remove(panel);
+                SpeedModule.pageSwitch();
             }
         });
 
         //frame and panel combination and JFrame parameters
+        frame.add(panel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.getContentPane().add(panel);
         frame.setJMenuBar(menubar);
-        frame.setSize(500, 500);   
+        frame.setSize(500, 500);
         frame.setVisible(true);
     }
 
